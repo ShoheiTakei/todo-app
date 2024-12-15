@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-const Form = ({todos, setTodos}) => {
+const Form = ({addTodo}) => {
   const [value, setValue] = useState('')
 
   const handleSubmit = e => {
@@ -12,12 +12,7 @@ const Form = ({todos, setTodos}) => {
       return window.alert('入力してください')
     }
     
-    setTodos([
-      ...todos,
-      {
-        content: value
-      }
-    ])
+    addTodo(value)
     
     // content更新後、入力値初期化する
     setValue('')

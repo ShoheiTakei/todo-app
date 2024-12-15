@@ -18,10 +18,21 @@ const App = () => {
     }
   ])
 
+  const addTodo = content => {
+    setTodos(
+      [
+        ...todos,
+        {
+          content: content
+        }
+      ]
+    )
+  }
+
   return (
     <>
       <h1>Todo App</h1>
-      <Form todos={todos} setTodos={setTodos} />
+      <Form addTodo={addTodo} />
       <List todos={todos} />
     </>
   )
