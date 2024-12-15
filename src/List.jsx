@@ -1,12 +1,12 @@
 import Item from './Item'
 
-const List = ({ todos }) => {
+const List = ({ todos, deleteTodo }) => {
   return (
     <ul>
       {
-        todos.map((todo, index) => {
+        todos.map((todo) => {
           return (
-            <Item content={todo.content} key={index} /> 
+            <Item key={todo.id} content={todo.content} id={todo.id} deleteTodo={deleteTodo} /> 
           )
         })
       }
