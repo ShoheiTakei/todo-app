@@ -10,6 +10,8 @@ const Item = ({ content }) => {
           setIsDone(!isDone)
 
           // NOTE:こういう書き方でも同じ動きになる
+          // 親Componentから子Componentに更新関数のみPropsで渡して、
+          // 子Component側で状態更新処理しか行わない時は、下記の書き方をすることが多いと思う
           // setIsDone((prev)=>!prev)
         }
       }/>

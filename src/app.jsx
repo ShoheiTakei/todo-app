@@ -1,8 +1,9 @@
 import Form from './Form'
 import List from './List'
+import {useState} from 'react'
 
 const App = () => {
-  const todos = [
+  const [todos, setTodos] = useState([
     {
       content: '課題をする'
     },
@@ -15,12 +16,12 @@ const App = () => {
     {
       content: '料理をする'
     }
-  ]
+  ])
 
   return (
     <>
       <h1>Todo App</h1>
-      <Form />
+      <Form todos={todos} setTodos={setTodos} />
       <List todos={todos} />
     </>
   )

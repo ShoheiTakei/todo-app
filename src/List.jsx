@@ -1,6 +1,6 @@
 import Item from './Item'
 
-const List = ({todos}) => {
+const List = ({ todos }) => {
   return (
     <ul>
       {
