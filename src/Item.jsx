@@ -1,8 +1,8 @@
-const Item = () => {
+const Item = ({content}) => {
   return (
     <li>
       <input type="checkbox" />
-      <span>サンプルテキスト</span>
+      <span>{content}</span>
     </li>
   )
 }
