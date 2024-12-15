@@ -1,7 +1,6 @@
 import {useState} from 'react'
 
-const Item = ({ content, id, deleteTodo }) => {
-  const [isDone, setIsDone] = useState(false)
+const Item = ({ id, content, isDone, deleteTodo, toggleIsDone }) => {
 
   const handleOnClick = (todoId) => {
     deleteTodo(todoId)

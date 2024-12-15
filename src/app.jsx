@@ -16,8 +16,16 @@ const App = () => {
           // ユニークid生成
           // ユニークの意味分かっているか確認
           id: nanoid(),
+          isDone: false,
         }
       ]
+    )
+  }
+
+  const toggleIsDone = (id) => {
+    setTodos(
+      (prev) => 
+        prev.map((todo)=> todo.id === id ? { ...todos, isDone: !todo.isDone } : todo)
     )
   }
 
@@ -33,7 +41,7 @@ const App = () => {
     <>
       <h1>Todo App</h1>
       <Form addTodo={addTodo}/>
-      <List todos={todos}  deleteTodo={deleteTodo}/>
+      <List todos={todos} deleteTodo={deleteTodo} toggleIsDone={toggleIsDone} />
     </>
   )
 }
