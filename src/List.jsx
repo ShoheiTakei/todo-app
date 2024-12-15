@@ -1,12 +1,12 @@
-import React from "react"
 import Item from './Item'
 
-const List = () => {
+const List = ({todos}) => {
   return (
     <ul>
-      <Item content={'課題をする'} />
-      <Item content={'選択をする'} />
-      <Item content={'電話をする'}/>
+      <Item content={todos[0].content} />
+      <Item content={todos[1].content} />
+      <Item content={todos[2].content}/>
+      <Item content={todos[3].content}/>
     </ul>
   )
 }
